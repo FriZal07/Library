@@ -9,6 +9,20 @@ const form = document.querySelector("form");
 const book = document.querySelector("#books");
 const bookLibrary = document.querySelector("#data_container");
 
+const targetDiv = document.querySelector('.model')
+const targetDiv2 = document.querySelector('#add_book')
+
+document.addEventListener('click', (e) => {
+const isClickedInsideDiv = e.composedPath().includes(targetDiv)
+const isClickedInsideDiv2 = e.composedPath().includes(targetDiv2)
+
+    if (!isClickedInsideDiv && !isClickedInsideDiv2) {
+        console.log('clicked inside of div')
+        overlay.style.display = 'none';
+    } 
+
+})
+
 add_book.addEventListener('click',() => {
     overlay.style.display = 'block';
 })
@@ -55,7 +69,6 @@ form.addEventListener("submit",() => {
 });
 
     overlay.style.display = 'none';
-
 
 })
 
@@ -107,8 +120,6 @@ function removeCard(current_book){
     current_book.remove();
     object_count = object_count -1;
 }
-
-
 
 function Book(name,author,pages,read){
     this.name = name;
