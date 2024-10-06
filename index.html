@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="head">
+        <div id="head_container">
+            
+        </div>
+    </div>
+    <div id="main">
+        <button id="add_book">
+            Add Book
+        </button>
+        <div id="main_container">
+
+            <div id="data_container">
+                <div id="books" style="display:none;"">
+                    <div id="rusname">Name</div>
+                    <div id="rusauthor">Aut</div>
+                    <div id="ruspage">Pag</div>
+                    <button id="rusread">Read</button>
+                    <button>Remove</button>
+                </div>
+            </div>
+                
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footer_container">
+            
+        </div>
+    </div>
+
+    <div class="overlay">
+        <form action="" onsubmit="return false" >
+            <div class="model">
+                <div id="name">
+                    <label for="nameinp">Name</label>
+                    <input required id="nameinp" type="text">
+                </div>
+                <div id="author">
+                    <label for="authorinp">Author</label>
+                    <input required id="authorinp" type="text">
+                </div>
+                <div id="pages">
+                    <label for="pagesinp">Pages</label>
+                    <input required id="pagesinp" type="number">
+                </div>
+                <div id="read">
+                    <label for="readinp">Read</label>
+                    <input id="readinp" type="checkbox">
+                </div>
+                <button id="sumb" type="submit">Add</button>
+            </div>
+        </form>
+    </div>
+
+    
+    
+</body>
+<script src="./script.js"></script>
+</html>
